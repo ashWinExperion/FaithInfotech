@@ -1,0 +1,324 @@
+
+#############
+Optional Labs
+#############
+
+####################################
+Lab 1 : Set up Free Tier AWS account 
+####################################
+
+Task 1: Start a free Tier account in  AWS
+------------------------------------------
+1. Go to https://portal.aws.amazon.com/billing/signup#/start
+2. Follow the 5 step process. You need to provide a credit card number but you wont be 
+   charged money as long as you dont exceed the free tier limits
+4. You may us this Youtube video which demonstrates the sign up process:
+   https://www.youtube.com/watch?v=XhW17g73fvY&t=294s
+
+ 
+Task 2: Set up monthly billing threshold alerts
+----------------------------------
+1. Go to Billing console. Click on Budgets
+2. Click on 'create budget'
+3. Add the name of budget and the target budget (ex: 2$). 
+4. Click on Configure Thresholds
+5. Setup Thresholds at 50%, 80% of actual cost 
+6. Give your mail id. 
+7. Click on 'Create'
+Objective of task 2 is to ensure that you get alerts if the bill amount excceeds the 
+specified threshold. Clean up the resources after you are done with the lab to avoid 
+unintended charges.
+
+
+
+#########################
+Lab 2. Create Elastic IPs 
+#########################
+
+1. Click on elastic IPs (left side menu in EC2 dashboard)
+2. Allocate elastic ip address
+3. Go to actions and associate this with one of the EC2 instances
+4. Go to EC2 dashboard and check the public ip of the instance. 
+5. For the EC2 with elastic IP, a stop & start will not change the IP address. But for the other 
+   one it will
+
+
+##############################################
+Lab 3. Copy a file from your laptop to the EC2 
+##############################################
+# SCP (Secure Copy Protocol) uses Secure Shell (SSH) for data transfer and uses the same mechanisms for 
+# authentication, thereby ensuring the authenticity and confidentiality of the data in transit.
+
+On your ec2:
+1. Create a new folder 'sample' in /home/ec2-user
+
+Task 1 : Copy file from laptop to ec2
+=====================================
+
+On your laptop:
+1. cd Downloads
+2. notepad temp.txt (Notepad will open)
+3. Add a sample text line in temp.txt. Save and close
+4. Transfer the file temp.txt to folder 'sample' in ec2 using below command.
+   scp -i "your-key-name" temp.txt ec2-user@ec2-44-201-78-39.compute-1.amazonaws.com:sample/
+
+On your ec2 machine, check within sample folder if the file is copied
+
+Task 1 : Copy file from EC2 to Laptop
+=====================================
+1. remove temp.txt from your laptop's Download folder
+2. scp -i "your-key-name" ec2-user@ec2-44-201-78-39.compute-1.amazonaws.com:sample/temp.txt ./
+3. Verify that temp.txt is copied into the downloads folder
+
+
+
+############################################
+Lab 4. S3 bucket creation and objects upload 
+############################################
+
+Task 1: Bucket creation and Object Upload
+=========================================
+1. Go to S3 console: https://s3.console.aws.amazon.com/s3/
+2. Click on 'Create Bucket'
+3. choose bucket name 'yourfirstname-2112'
+4. Choose the region assigned to you (us-east-1 / us-east-2 / ap-south-1)
+5. Under Object Ownership, click on ACLs enabled;
+6. Unclick 'Block All Public Access'
+7. Add Tag 'Name: yourname-S3'
+8. Rest can be default values. Create Bucket
+9. Click on the bucket name and open it.
+10. You can download this photo and upload it in your bucket
+    https://unusbucket200.s3.amazonaws.com/IdukkiVillage.jpg 
+11. Open command prompt. cd Desktop. Type: notepad index.html
+12. In the notepad enter the below code and save (filename:index.html)
+
+<html>
+    <head>
+        <title>My First Webpage</title>
+    </head>
+    <body>
+        <h1>your name's First Page</h1>
+        <p>Hello world!</p>
+    </body>
+
+    <img src="IdukkiVillage.jpg" height=600 width=900/>
+ </html>
+
+13. Upload index.html to your bucket
+
+Task 2: Set up static website in S3
+===================================
+01. Click on bucket properties
+02. Edit static web site hosting; Enable it; Select 'host a static website'
+03. Index document - index.html; error document - error.html
+04. Save changes
+05. Copy the website address from under section static website hosting and paste it in browser
+06. You will error as there are no sufficient permissions
+07. Edit bucket policy under Permissions
+08. Click on Policy generator
+09. In step 1 - select S3 bucket policy
+10. In step2, click on Allow, eneter '*' against principal. 
+11. Select 'GetObject' against actions
+12. Copy Paste ARN from the S3 bucket console
+13. Click on 'Add Statement' then 'Generate Policy'
+14. Copy the policy text from the text box
+15. Go to S3 console and paste it under bucket policy
+16. Add a '/*' at the end of resource name inside policy text
+17. Go back to the web browser with S3 URL and confirm that your web page is working
+
+
+Task 3: Clean up the Lab
+========================
+1. Delete objects from bucket
+2. Delete bucket
+
+
+###################
+Lab 5. Auto Scaling
+###################
+
+Task 1 : Create Launch Template
+===============================
+1. Terminate the ec2 instances you have launched for previous exercises
+2. Click on Launch Template (ec2 dashboard -> left side menu)
+3. Add an LT with name yourname-LT-1 
+4. Add Name tag (Name: yourname-ASG)
+5. Choose Ubuntu 20.04 AMI 
+6. Choose instance type t2.micro
+7. Choose the same key pair you had used for first ec2
+8. Choose default vpc
+9. Choose the security group from last exercise (it should have ssh port activated) 
+10. Click on Create Launch Template
+
+
+Task 2 : Create Auto Scaling Group
+==================================
+1. Now, click on auto scaling group (ec2 dashboard left side menu)
+2. Give name as yourname-ASG
+3. Choose the availability zone as us-east-1a or us-east-2b or ap-south-1a etc..
+4. Choose Max capacity as 2; Desired Capacity 1; Min capacity 1
+5. Choose target tracking scaling policy. Choose CPU utilization - target value 30
+6. Add Tags: "Name" : "yourname-ASG-ec2"
+7. Rest can be default values
+8. Click on create auto scaling group
+9. Observe that one new ec2 instance with the above tag appears in the EC2 dashboard
+
+
+Task 3 : Generate workload for EC2
+==================================
+We need this step to increase the CPU utilization so that it will trigger auto scaling
+
+1. SSH into the new ASG EC2 (go to connect -> go to SSH client -> copy the last line -> enter the same in cmd window)
+2. Install a load generator tool with below commands
+   $ sudo apt-get update
+   $ sudo apt-get install stress
+3. Generate load in the ec2 with below command: (3 workers spawning sqrt() function for 300 seconds)
+   stress --cpu 3 -v --timeout 300
+4. Now go back to AWS console > Services > EC2 > Instances and select your instance. Go to its description 
+   and click on Monitoring. You see High CPU utilization. (it will take 2-3 mins before it appears here)  
+5. Go to AWS console > Services > EC2 > Instances. You can see that one more instance is created with same 
+   name. (It will take 5 minutes before the scaling action is triggered)  
+6. Clean up the lab by terminating your instances
+
+
+Task 4 : Clean up the Lab
+=========================
+
+1. Terminate the 2 EC2 instances in ASG
+2. Remove the Auto scaling group
+3. Remove the Launch template
+4. Delete the security group
+5. Delete the keypair which we created
+
+
+
+##############################
+Lab 6. Create a mySQL Database  
+##############################
+
+Task 1 : Create DB instance
+===========================
+1. Go to RDS console and start creating an RDS instance.
+   Us Standard create / mySQL engine / version - any / templatyes - free tier
+   DB instance identifier : yourname-DB1
+   Master yser name: admin; pw:test1234
+   DB instance class t2.micro
+2. Set public access as Y, auto back up as Yes
+   Choose password authentication; Rest everything default
+3. Click on Create DB. This will take a few minutes. In the meantime set up mysql 
+   client in your EC2 
+4. From your EC2 shell, install mySQL : 
+   Ubuntu:
+   sudo apt-get update
+   sudo apt-get install mysql-client 
+
+   Red Hat / Amazon Linux 2:
+   sudo yum update
+   sudo yum install mysql
+   Ensure that the Security Group has an inbound rule entry for MySQL/Aurora 3306
+
+5. Go to the RDS console. click on the RDS instance created and copy the DNS endpoint
+   ex: unus-db1.clqxyqh2nvhe.us-east-1.rds.amazonaws.com
+
+6. Connect to the RDS endpoint:
+   mysql -h unus-db1.clqxyqh2nvhe.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+   
+7. It will ask for password - please enter the password. You will get MySQL prompt
+mysql>
+
+8. CREATE DATABASE UnusDB;
+9. Show databases;
+10. Use UnusDB; (Change the DB to UnusDB)
+
+use 'status' comamnd to list the DB in which you are in.
+status
+
+Task 2: Create a table add some entries in the DB
+=================================================
+mysql>
+create table
+create table customers(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+use desc comamnd to check if table is created
+desc customers;
+
+Include some values in the DB:
+INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Ramesh', 32, 'Mysore', 50000.00 );
+
+INSERT INTO customers (ID, NAME, AGE, ADDRESS, SALARY)
+VALUES (2, 'Lakshmi', 25, 'Delhi', 45000.00 );
+
+INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, 'Koshi', 23, 'Trivandrum',55000.00 );
+
+INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, 'Chaitali', 25, 'Mumbai', 65000.00 );
+
+INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, 'Hardik', 27, 'Bhopal', 60000.00 );
+
+INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'Bangalore', 45000.00 );
+
+Display the table:
+SELECT * FROM customers;
+select NAME, AGE from customers;
+
+To delete the table:
+drop table customers;
+
+
+
+Task 3 : Create DB Table from CSV file in EC2
+=============================================
+
+11. Add new rows into the DB Table
+   LOAD DATA LOCAL INFILE '/home/ec2-user/books.csv' 
+   INTO TABLE books FIELDS TERMINATED BY ',' 
+   LINES TERMINATED BY '\n'
+   IGNORE 1 ROWS;
+
+
+Task 4 : Create DB Table from CSV file in your laptop
+=====================================================
+
+12. Copying data from a CSV file as below: (To be debugged)
+LOAD DATA INFILE 'C:\\Users\\unus.ebrahim\\Desktop\\BookList3.csv' 
+INTO TABLE books
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+Removed ENCLOSED BY '"'
+
+Task 5 : Create DB User names
+=============================
+
+13. Grant permissions to users (to be debugged)
+    GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost';
+    GRANT ALL PRIVILEGES ON UnusDB.* TO 'admin'@'%'; (This worked)
+
+    GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
+    GRANT ALL ON UnusDB.* TO 'admin'@'172.31.45.14';
+
+14. Create a user with all permissions (to be debugged)
+CREATE USER 'Unus11'@'%%' IDENTIFIED BY 'test1234';
+GRANT ALL PRIVILEGES ON * . * TO 'Unus11'@'%%';
+
+
+
+Task 6 : Lab Cleanup
+====================
+1. exit from mysql client by typing 'exit'
+2. To view the internal IP of DB instance, you can use:
+   host <endpoint>  
+3. Delete the DB instance
+
+

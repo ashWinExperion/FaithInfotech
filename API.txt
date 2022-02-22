@@ -1,0 +1,163 @@
+1. Appoint List View
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from ap in Appointments
+join pt in Patients
+on ap.Patient_Id equals pt.Patient_Id
+join doc in Doctors
+on ap.Doctor_Id equals doc.Doctor_Id
+join usr in Users
+on doc.User_Id equals usr.User_Id
+select new {staus=ap.Status,date=ap.Date,firstName=pt.FirstName,lastName=pt.LastName,docFirstName=usr.FirstName,docLastName=usr.LastName,token=ap.TokenNumber}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Med Prescribed For An Appointment
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(from ap in Appointments
+join pt in Patients
+on ap.Patient_Id equals pt.Patient_Id
+
+join doc in Doctors
+on ap.Doctor_Id equals doc.Doctor_Id
+
+join usr in Users
+on doc.User_Id equals usr.User_Id
+
+join rl in Roles
+on usr.Role_Id equals rl.Role_Id
+
+join medPres in MedicinePrescriptions
+on ap.Appointment_Id equals medPres.Appointment_Id
+
+join medL in MedicineLists
+on  medPres.MedicinePrescription_Id equals medL.MedicinePrescription_Id
+
+join med in Medicines
+on  medL.Medicine_Id equals med.Medicine_Id
+
+join usrP in Users
+on medPres.Pharmacist_Id equals usrP.User_Id
+
+join rlP in Roles
+on usrP.Role_Id equals rlP.Role_Id
+
+where rlP.Role_Id == 4 && rl.Role_Id ==2 && ap.Appointment_Id == 5
+
+select new {
+appontmentId=ap.Appointment_Id,
+patientId=pt.Patient_Id,staus=ap.Status,date=ap.Date,
+firstName=pt.FirstName,lastName=pt.LastName,docFirstName=usr.FirstName,
+docLastName=usr.LastName
+,token=ap.TokenNumber
+,medName=med.Name
+,pharmaFirstName=usrP.FirstName
+,pharmaLastName=usrP.LastName})
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Test Prescribed For An Appointment
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(from ap in Appointments
+join pt in Patients
+on ap.Patient_Id equals pt.Patient_Id
+join doc in Doctors
+on ap.Doctor_Id equals doc.Doctor_Id
+join usr in Users
+on doc.User_Id equals usr.User_Id
+join testPres in TestPrescriptions
+on ap.Appointment_Id equals testPres.Appointment_Id
+join testR in TestReports
+on  testPres.TestPrescription_Id equals testR.TestPrescription_Id
+join tst in Tests
+on  testR.Test_Id equals tst.Test_Id
+select new {patientId=pt.Patient_Id,status=ap.Status,date=ap.Date,
+firstName=pt.FirstName,lastName=pt.LastName,docFirstName=usr.FirstName,
+docLastName=usr.LastName
+,token=ap.TokenNumber
+,medName=tst.TestName}).GroupBy(x=>x.patientId,x=>x)
+
+---------------------OR-------------------------------------------------
+(from ap in Appointments
+join pt in Patients
+on ap.Patient_Id equals pt.Patient_Id
+join doc in Doctors
+on ap.Doctor_Id equals doc.Doctor_Id
+join usr in Users
+on doc.User_Id equals usr.User_Id
+join testPres in TestPrescriptions
+on ap.Appointment_Id equals testPres.Appointment_Id
+join testR in TestReports
+on  testPres.TestPrescription_Id equals testR.TestPrescription_Id
+join tst in Tests
+on  testR.Test_Id equals tst.Test_Id
+select new 
+{patientId=pt.Patient_Id,status=ap.Status,date=ap.Date,testPrescriptionID=testPres.TestPrescription_Id,
+firstName=pt.FirstName,lastName=pt.LastName,docFirstName=usr.FirstName,
+docLastName=usr.LastName
+,token=ap.TokenNumber
+,medName=tst.TestName}).GroupBy(x=>x.patientId,x=>x)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Selecting All Specialization Of And Doctors
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(from doc in Doctors
+join usr in Users
+on doc.User_Id equals usr.User_Id
+join sp in Specializations
+on doc.Specialization_Id equals sp.Specialization_Id
+select new {docFirstName=usr.FirstName,
+docLastName=usr.LastName,
+specializationID=sp.Specialization_Id,
+SpecializationName=sp.SpecializationName
+})
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+5. Selecting A Particular Specialized Doctor
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(from doc in Doctors
+join usr in Users
+on doc.User_Id equals usr.User_Id
+join sp in Specializations
+on doc.Specialization_Id equals sp.Specialization_Id
+where sp.Specialization_Id==1
+select new {docFirstName=usr.FirstName,
+docLastName=usr.LastName,
+specializationID=sp.Specialization_Id,
+SpecializationName=sp.SpecializationName
+})
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. All Appointments For Today
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from ap in Appointments
+join pt in Patients
+on ap.Patient_Id equals pt.Patient_Id
+join doc in Doctors
+on ap.Doctor_Id equals doc.Doctor_Id
+join usr in Users
+on doc.User_Id equals usr.User_Id
+where Convert.ToString(ap.Date) == DateTime.Today.ToString("yyyy-MM-dd")
+select new {staus=ap.Status,date=ap.Date,
+firstName=pt.FirstName,lastName=pt.LastName,
+docFirstName=usr.FirstName,docLastName=usr.LastName,
+token=ap.TokenNumber}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

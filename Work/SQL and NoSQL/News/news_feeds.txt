@@ -1,0 +1,701 @@
+news> db.news_feeds.find()
+[
+  {
+    _id: ObjectId("61c17ce13e05a70e439da5fd"),
+    author: 'News Desk',
+    title: "Kolkata Municipal Corporation Election Results 2021 LIVE Updates: 'Khela Hobe' Plays Outside Mamata's Home - News18",
+    description: 'KMC Election 2021 LIVE Updates: The polls took place amid heightened security and following Covid-19 protocols on Sunday across 4,959 polling booths.',
+    url: 'https://www.news18.com/news/india/kolkata-municipal-election-results-2021-live-updates-counting-of-votes-tmc-vs-bjp-cpi-mamata-banerjee-latest-news-livenews-4576022.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/screenshot-32-164005952616x9.png',
+    publishedAt: '2021-12-21T04:22:51Z',
+    content: "Dec 21, 2021 10:13 ISTKMC Election 2021 Result LIVE: Celebrations Begin Outside CM's Residence as TMC Wins 3 Seats, Cong Bags 1\r\n" +
+      'Trends\r\n' +
+      'TMC 119\r\n' +
+      'BJP 3\r\n' +
+      'LF 3\r\n' +
+      'Cong 2\r\n' +
+      'Others 2\r\n' +
+      'Dec 21, 2021 10:02 IST… [+7199 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5fe"),
+    author: 'Darab Ali',
+    title: 'Realme GT 2 Pro May Change The Android Market With These 3 New Features - News18',
+    description: "The Realme GT 2 Pro will be launched as the Chinese company's next flagship offering.",
+    url: 'https://www.news18.com/news/tech/realme-gt-2-pro-may-change-the-android-market-with-these-3-new-features-4576349.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/realme-gt-2-pro-164005964416x9.jpg',
+    publishedAt: '2021-12-21T04:07:41Z',
+    content: 'Chinese smartphone maker Realme has announced features of its next flagship, the Realme GT 2 Pro. The company claims that three new features on the Realme GT 2 Pro come as “world’s first innovations"… [+2903 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5ff"),
+    author: null,
+    title: 'iQOO Neo 5S with Snapdragon 888 and Neo 5SE launched - India Today',
+    description: 'iQOO has announced its latest smartphones the iQOO Neo 5S and iQOO Neo 5 SE in its Neo series of smartphones.',
+    url: 'https://www.indiatoday.in/technology/news/story/iqoo-neo-5s-with-snapdragon-888-and-neo-5se-launched-1890182-2021-12-21',
+    urlToImage: 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/iQOO_Neo_5s_0-647x363.jpeg?pM4tNMx5SX1TNoqvyts_5IE5xYABK3Rw',
+    publishedAt: '2021-12-21T04:04:18Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da600"),
+    author: 'Reuters',
+    title: "Ashes: 'Why are you captain?' Ricky Ponting slams Joe Root comments on England bowlers - Times of India",
+    description: "Cricket News: Former Australia skipper Ricky Ponting has questioned Joe Root's comments about England's bowlers during the Ashes and said that as captain of the tou",
+    url: 'https://timesofindia.indiatimes.com/sports/cricket/news/ashes-why-are-you-captain-ricky-ponting-slams-joe-root-comments-on-england-bowlers/articleshow/88402571.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid-88402575,width-1070,height-580,imgsize-46416,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+    publishedAt: '2021-12-21T03:15:00Z',
+    content: "Australia's greatest off-spinner joins Australia's greatest leg-spinner with the most Test wickets at Adelaide Oval https://t.co/YfDxhYdkhW\r\n" +
+      '— cricket.com.au (@cricketcomau) 1640035620000'
+  },
+  {
+    '0': {
+      source: { id: 'the-times-of-india', name: 'The Times of India' },
+      author: 'TIMESOFINDIA.COM',
+      title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes - Times of India',
+      description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+      url: 'https://timesofindia.indiatimes.com/gadgets-news/garena-free-fire-redeem-codes-for-december-21-how-to-redeem-daily-codes/articleshow/88399889.cms',
+      urlToImage: 'https://static.toiimg.com/thumb/msid-88399877,width-1070,height-580,imgsize-86786,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+      publishedAt: '2021-12-21T03:09:00Z',
+      content: null
+    },
+    _id: ObjectId("61c17e343e05a70e439da601")
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da602"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'TIMESOFINDIA.COM',
+    title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes Times of India',
+    description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+    url: 'https://timesofindia.indiatimes.com/gadgets news/garena free fire redeem codes for december 21 how to redeem daily codes/articleshow/88399889.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid 88399877,width 1070,height 580,imgsize 86786,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg',
+    publishedAt: '2021 12 21T03:09:00Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da603"),
+    source: { id: null, name: 'Bollyinside.com' },
+    author: null,
+    title: "Free Live Virtual Shows from SMC's Drescher Planetarium Explore Venus, Lunar Vehicles and Exoplanets This Winter BollyInside",
+    description: 'The winter 2022 shows are: • Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): “Venus, We’ve Missed You!” — Associate Lecturer',
+    url: 'https://www.bollyinside.com/news/free live virtual shows from smcs drescher planetarium explore venus lunar vehicles and exoplanets this winter',
+    urlToImage: 'https://www.bollyinside.com/wp content/uploads/2021/10/Amazon wants to turn your cell phone into a satellite.png',
+    publishedAt: '2021 12 21T02:38:19Z',
+    content: 'The winter 2022 shows are: Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): Venus, Weve Missed You! Associate Lecturer Sarah Vincent. Venus may be named for the Roman god… [+1957 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da604"),
+    source: { id: null, name: 'News18' },
+    author: 'Cricketnext Staff',
+    title: "'They Can Make Such Arrangements': Former Pak Captain Reacts to Postponement of IND vs SA T20Is News18",
+    description: 'Former Pakistan captain Salman Butt said India have got their priorities. He even speculated that the Men in Blue might play a bilateral series with Australia ahead of the mega ICC event.',
+    url: 'https://www.news18.com/cricketnext/news/they can make such arrangements former pak captain reacts to postponement of ind vs sa t20is 4576034.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/rohit sharma led team india 164005345816x9.jpg',
+    publishedAt: '2021 12 21T02:24:42Z',
+    content: 'Team Indias South Africa tour is set to begin from December 26 in Centurion. The visitors will play 3 Tests, followed by as many ODIs. Initially, the tour was supposed to kick off on December 17 and … [+1901 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da605"),
+    source: { id: null, name: 'Livemint' },
+    author: 'Rashmi Sanyal',
+    title: 'Stocks to Watch: Axis Bank, Yes Bank, Dish TV, Adani Enterprises, Wipro Mint',
+    description: 'MapmyIndia will make its stock exchange debut on today. Experts largely feel the listing will be at a premium. MapmyIndia, which offers proprietary digital maps as a service (MaaS), software as a service (SaaS) and platform as a service (PaaS), saw its issue …',
+    url: 'https://www.livemint.com/market/stock market news/stocks to watch axis bank yes bank dish tv adani enterprises wipro 11640049457474.html',
+    urlToImage: 'https://images.livemint.com/img/2021/12/21/600x338/stock_markets_1640053271772_1640053271926.JPG',
+    publishedAt: '2021 12 21T02:23:07Z',
+    content: 'Axis Bank: Has emerged as the frontrunner to buy Citis consumer business in India, piping rival contenders Kotak Mahindra Bank and Indusind Bank. Axis and Citi has signed an exclusivity agreement to … [+2684 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da606"),
+    source: { id: null, name: 'CNBCTV18' },
+    author: 'Sandeep Singh',
+    title: "Trade setup for Dec 21: Will Nifty50 bounce back now? Check out key market cues before Tuesday's session CNBCTV18",
+    description: "Trade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts suggest for the coming session on Dalal Street.",
+    url: 'https://www.cnbctv18.com/market/stocks/trade setup for dec 21 trading guide where is nifty50 headed key market cues before tuesday session 11875972.htm',
+    urlToImage: 'https://images.cnbctv18.com/wp content/uploads/2021/02/bond market.jpg',
+    publishedAt: '2021 12 21T02:23:00Z',
+    content: "MiniTrade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts su… [+44 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da607"),
+    source: { id: null, name: 'News18' },
+    author: 'Sonil Dedhia',
+    title: "83 Movie Review: Ranveer Singh Delivers His Career Best Performance As Kapil Dev in Kabir Khan's Film News18",
+    description: '83 movie review: While Ranveer Singh leads the team as the captain, the actor gets massive support from the rest of the cast that delivers some top notch performances.',
+    url: 'https://www.news18.com/news/movies/83 movie review ranveer singh delivers his career best performance as kapil dev in kabir khan film 4576016.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/ranveer singh 6 1 164005207816x9.jpg',
+    publishedAt: '2021 12 21T02:17:00Z',
+    content: '83\r\n' +
+      'Director: Kabir Khan\r\n' +
+      'Cast: Ranveer Singh, Deepika Padukone, Pankaj Tripathi, Tahir Raj Bhasin, Jiiva, Saqib Saleem, Jatin Sarna, Chirag Patil, Dinker Sharma, Nishant Dahiya, Harrdy Sandhu, Sahil… [+4011 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da608"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: 'CMS Info Systems IPO opens today. Should you subscribe to the issue? Moneycontrol.com',
+    description: 'Majority of the brokerages hold a positive view about the company which, on December 20, garnered Rs 330 crore from 12 anchor investors',
+    url: 'https://www.moneycontrol.com/news/business/ipo/cms info systems ipo opens today should you subscribe 7847111.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/10/IPO 1 770x433.jpg',
+    publishedAt: '2021 12 21T02:12:40Z',
+    content: 'CMS Info Systems Limited (CMS) will float its Rs 1,100 crore public issue on December 21. The offer will close on Thursday.\r\n' +
+      'CMS is one of the largest ATM cash management companies worldwide based on… [+5874 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da609"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: "Hot Stocks | Here's Why You Should Bet On Finolex Cables, RHI Magnesita India, And Sell Grasim In Short term Moneycontrol.com",
+    description: 'Nandish Shah of HDFC securities believes that, short term trend of the Nifty remains weak. Therefore, their advice is to remain cautious till Nifty closes above the 17,000 levels.',
+    url: 'https://www.moneycontrol.com/news/business/markets/hot stocks here is why you should bet on finolex cables rhi magnesita india and sell grasim in short term 7846401.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/03/Trading 770x433.jpg',
+    publishedAt: '2021 12 21T02:04:19Z',
+    content: 'Nandish Shah, Senior Derivative &amp; Technical Analyst at HDFC securities\r\n' +
+      'Nifty plunged 371 points or 2.18 percent on Monday amid Omicron fears to close at four month low at 16,614 levels. This is … [+2950 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60a"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'Teena Thacker',
+    title: 'Next few days to tell if Omicron or Delta led to surge, say experts Economic Times',
+    description: 'Doctors say that the next few days are crucial. With cases going up, many experts have called for booster jabs for healthcare workers. Some experts say Omicron is likely to spread.',
+    url: 'https://economictimes.indiatimes.com/news/india/next few days to tell if omicron or delta led to surge say experts/articleshow/88401377.cms',
+    urlToImage: 'https://img.etimg.com/thumb/msid 88401399,width 1070,height 580,imgsize 29388,overlay economictimes/photo.jpg',
+    publishedAt: '2021 12 21T01:21:00Z',
+    content: "As parts of India start to see an uptick in Covid 19 cases, experts say it will take a few days to determine whether it's a resurgence of the Delta variant due to declining immunity or if Omicron, th… [+2382 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60b"),
+    source: { id: null, name: 'The Indian Express' },
+    author: 'Kanchan Vasdev',
+    title: 'Bills on life term for sacrilege pending, need President assent: Punjab to Centre The Indian Express',
+    description: '🔴 Speaking to The Indian Express, Deputy Chief Minister Sukhjinder Singh Randhawa said that “the state has written to the Centre umpteen times about the pending assent".',
+    url: 'https://indianexpress.com/article/cities/chandigarh/bills on life term for sacrilege pending need president assent punjab to centre 7682688/',
+    urlToImage: 'https://images.indianexpress.com/2021/12/Golden Temple 1.jpeg',
+    publishedAt: '2021 12 21T01:13:48Z',
+    content: 'ON A day when the Punjab police released a photo of the youth who was beaten to deathfor allegedly committing an act of sacrilege at the Golden Temple in a bid to identify him, Deputy Chief Minister … [+4702 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60c"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'Agence France Presse',
+    title: 'Rafael Nadal Says He Has Tested Positive For Covid NDTV Sports',
+    description: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week.',
+    url: 'https://sports.ndtv.com/tennis/rafael nadal says he has tested positive for covid 2661270',
+    urlToImage: 'https://c.ndtvimg.com/2021 12/p57fe6f4_rafael nadal_625x300_18_December_21.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=675',
+    publishedAt: '2021 12 21T00:38:00Z',
+    content: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week. "I am going through some unpleasant moment… [+1227 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60d"),
+    source: { id: null, name: 'Hindustan Times' },
+    author: 'hindustantimes.com',
+    title: "Omicron will lead to 'viral blizzard' of Covid 19, says US expert Hindustan Times",
+    description: 'Omicron is now the dominant strain in the US, accounting for 73 per cent of new infections last week, federal health officials said on Monday. Since the end of June, the delta variant had been the main version causing US infections. | World News',
+    url: 'https://www.hindustantimes.com/world news/omicron will lead to viral blizzard of covid 19 says us expert 101640046102476.html',
+    urlToImage: 'https://images.hindustantimes.com/img/2021/12/21/1600x900/Omicron_threat_mask_1640046340676_1640046340867.jpg',
+    publishedAt: '2021 12 21T00:28:32Z',
+    content: 'The Omicron variant has been spreading across the United States rapidly. It was already hit hard by the earlier waves of the pandemic, and not the new strain of coronavirus has accelerated the rate o… [+1802 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60e"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'NDTV Newsdesk',
+    title: 'COVID 19 Live Updates: 6,563 Cases In India Today, 7% Lower Than Yesterday NDTV',
+    description: 'India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Family Welfare today, taking the total cases in the country since the beginning of the pandemic to 3,47,46,838.',
+    url: 'https://www.ndtv.com/india news/coronavirus india live updates india reports 7 081 cases in last 24 hours 2660342',
+    urlToImage: 'https://c.ndtvimg.com/2021 11/si9s679g_coronavirus india afp nov 2021_650x400_02_November_21.jpg',
+    publishedAt: '2021 12 21T00:23:12Z',
+    content: 'COVID 19 Cases: India has so far conducted over 66.41 crore cumulative tests. (File)\r\n' +
+      'New Delhi: India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Fa… [+6416 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60f"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'TNN',
+    title: 'Of 161 Omicron cases, 80% are asymptomatic, says minister Times of India',
+    description: 'India News: Of a total of 161 cases of the Omicron variant of Covid 19 detected in the country so far, 13% were mild, whereas 80% were asymptomatic and 44 have re',
+    url: 'https://timesofindia.indiatimes.com/india/of 161 omicron cases 80 are asymptomatic says minister/articleshow/88400647.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid 88400649,width 1070,height 580,imgsize 24522,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg',
+    publishedAt: '2021 12 20T23:13:00Z',
+    content: 'Of 161 Omicron cases, 80% are asymptomatic, says minister\r\n' +
+      '<ul><li>News</li>\r\n' +
+      '<li>India News</li>\r\n' +
+      '<li>Of 161 Omicron cases, 80% are asymptomatic, says minister</li></ul>'
+  }
+]
+news> db.news_feeds.find().preety();
+TypeError: db.news_feeds.find().preety is not a function
+news> db.news_feeds.find().pretty();
+[
+  {
+    _id: ObjectId("61c17ce13e05a70e439da5fd"),
+    author: 'News Desk',
+    title: "Kolkata Municipal Corporation Election Results 2021 LIVE Updates: 'Khela Hobe' Plays Outside Mamata's Home - News18",
+    description: 'KMC Election 2021 LIVE Updates: The polls took place amid heightened security and following Covid-19 protocols on Sunday across 4,959 polling booths.',
+    url: 'https://www.news18.com/news/india/kolkata-municipal-election-results-2021-live-updates-counting-of-votes-tmc-vs-bjp-cpi-mamata-banerjee-latest-news-livenews-4576022.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/screenshot-32-164005952616x9.png',
+    publishedAt: '2021-12-21T04:22:51Z',
+    content: "Dec 21, 2021 10:13 ISTKMC Election 2021 Result LIVE: Celebrations Begin Outside CM's Residence as TMC Wins 3 Seats, Cong Bags 1\r\n" +
+      'Trends\r\n' +
+      'TMC 119\r\n' +
+      'BJP 3\r\n' +
+      'LF 3\r\n' +
+      'Cong 2\r\n' +
+      'Others 2\r\n' +
+      'Dec 21, 2021 10:02 IST… [+7199 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5fe"),
+    author: 'Darab Ali',
+    title: 'Realme GT 2 Pro May Change The Android Market With These 3 New Features - News18',
+    description: "The Realme GT 2 Pro will be launched as the Chinese company's next flagship offering.",
+    url: 'https://www.news18.com/news/tech/realme-gt-2-pro-may-change-the-android-market-with-these-3-new-features-4576349.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/realme-gt-2-pro-164005964416x9.jpg',
+    publishedAt: '2021-12-21T04:07:41Z',
+    content: 'Chinese smartphone maker Realme has announced features of its next flagship, the Realme GT 2 Pro. The company claims that three new features on the Realme GT 2 Pro come as “world’s first innovations"… [+2903 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5ff"),
+    author: null,
+    title: 'iQOO Neo 5S with Snapdragon 888 and Neo 5SE launched - India Today',
+    description: 'iQOO has announced its latest smartphones the iQOO Neo 5S and iQOO Neo 5 SE in its Neo series of smartphones.',
+    url: 'https://www.indiatoday.in/technology/news/story/iqoo-neo-5s-with-snapdragon-888-and-neo-5se-launched-1890182-2021-12-21',
+    urlToImage: 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/iQOO_Neo_5s_0-647x363.jpeg?pM4tNMx5SX1TNoqvyts_5IE5xYABK3Rw',
+    publishedAt: '2021-12-21T04:04:18Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da600"),
+    author: 'Reuters',
+    title: "Ashes: 'Why are you captain?' Ricky Ponting slams Joe Root comments on England bowlers - Times of India",
+    description: "Cricket News: Former Australia skipper Ricky Ponting has questioned Joe Root's comments about England's bowlers during the Ashes and said that as captain of the tou",
+    url: 'https://timesofindia.indiatimes.com/sports/cricket/news/ashes-why-are-you-captain-ricky-ponting-slams-joe-root-comments-on-england-bowlers/articleshow/88402571.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid-88402575,width-1070,height-580,imgsize-46416,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+    publishedAt: '2021-12-21T03:15:00Z',
+    content: "Australia's greatest off-spinner joins Australia's greatest leg-spinner with the most Test wickets at Adelaide Oval https://t.co/YfDxhYdkhW\r\n" +
+      '— cricket.com.au (@cricketcomau) 1640035620000'
+  },
+  {
+    '0': {
+      source: { id: 'the-times-of-india', name: 'The Times of India' },
+      author: 'TIMESOFINDIA.COM',
+      title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes - Times of India',
+      description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+      url: 'https://timesofindia.indiatimes.com/gadgets-news/garena-free-fire-redeem-codes-for-december-21-how-to-redeem-daily-codes/articleshow/88399889.cms',
+      urlToImage: 'https://static.toiimg.com/thumb/msid-88399877,width-1070,height-580,imgsize-86786,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+      publishedAt: '2021-12-21T03:09:00Z',
+      content: null
+    },
+    _id: ObjectId("61c17e343e05a70e439da601")
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da602"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'TIMESOFINDIA.COM',
+    title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes Times of India',
+    description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+    url: 'https://timesofindia.indiatimes.com/gadgets news/garena free fire redeem codes for december 21 how to redeem daily codes/articleshow/88399889.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid 88399877,width 1070,height 580,imgsize 86786,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg',
+    publishedAt: '2021 12 21T03:09:00Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da603"),
+    source: { id: null, name: 'Bollyinside.com' },
+    author: null,
+    title: "Free Live Virtual Shows from SMC's Drescher Planetarium Explore Venus, Lunar Vehicles and Exoplanets This Winter BollyInside",
+    description: 'The winter 2022 shows are: • Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): “Venus, We’ve Missed You!” — Associate Lecturer',
+    url: 'https://www.bollyinside.com/news/free live virtual shows from smcs drescher planetarium explore venus lunar vehicles and exoplanets this winter',
+    urlToImage: 'https://www.bollyinside.com/wp content/uploads/2021/10/Amazon wants to turn your cell phone into a satellite.png',
+    publishedAt: '2021 12 21T02:38:19Z',
+    content: 'The winter 2022 shows are: Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): Venus, Weve Missed You! Associate Lecturer Sarah Vincent. Venus may be named for the Roman god… [+1957 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da604"),
+    source: { id: null, name: 'News18' },
+    author: 'Cricketnext Staff',
+    title: "'They Can Make Such Arrangements': Former Pak Captain Reacts to Postponement of IND vs SA T20Is News18",
+    description: 'Former Pakistan captain Salman Butt said India have got their priorities. He even speculated that the Men in Blue might play a bilateral series with Australia ahead of the mega ICC event.',
+    url: 'https://www.news18.com/cricketnext/news/they can make such arrangements former pak captain reacts to postponement of ind vs sa t20is 4576034.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/rohit sharma led team india 164005345816x9.jpg',
+    publishedAt: '2021 12 21T02:24:42Z',
+    content: 'Team Indias South Africa tour is set to begin from December 26 in Centurion. The visitors will play 3 Tests, followed by as many ODIs. Initially, the tour was supposed to kick off on December 17 and … [+1901 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da605"),
+    source: { id: null, name: 'Livemint' },
+    author: 'Rashmi Sanyal',
+    title: 'Stocks to Watch: Axis Bank, Yes Bank, Dish TV, Adani Enterprises, Wipro Mint',
+    description: 'MapmyIndia will make its stock exchange debut on today. Experts largely feel the listing will be at a premium. MapmyIndia, which offers proprietary digital maps as a service (MaaS), software as a service (SaaS) and platform as a service (PaaS), saw its issue …',
+    url: 'https://www.livemint.com/market/stock market news/stocks to watch axis bank yes bank dish tv adani enterprises wipro 11640049457474.html',
+    urlToImage: 'https://images.livemint.com/img/2021/12/21/600x338/stock_markets_1640053271772_1640053271926.JPG',
+    publishedAt: '2021 12 21T02:23:07Z',
+    content: 'Axis Bank: Has emerged as the frontrunner to buy Citis consumer business in India, piping rival contenders Kotak Mahindra Bank and Indusind Bank. Axis and Citi has signed an exclusivity agreement to … [+2684 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da606"),
+    source: { id: null, name: 'CNBCTV18' },
+    author: 'Sandeep Singh',
+    title: "Trade setup for Dec 21: Will Nifty50 bounce back now? Check out key market cues before Tuesday's session CNBCTV18",
+    description: "Trade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts suggest for the coming session on Dalal Street.",
+    url: 'https://www.cnbctv18.com/market/stocks/trade setup for dec 21 trading guide where is nifty50 headed key market cues before tuesday session 11875972.htm',
+    urlToImage: 'https://images.cnbctv18.com/wp content/uploads/2021/02/bond market.jpg',
+    publishedAt: '2021 12 21T02:23:00Z',
+    content: "MiniTrade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts su… [+44 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da607"),
+    source: { id: null, name: 'News18' },
+    author: 'Sonil Dedhia',
+    title: "83 Movie Review: Ranveer Singh Delivers His Career Best Performance As Kapil Dev in Kabir Khan's Film News18",
+    description: '83 movie review: While Ranveer Singh leads the team as the captain, the actor gets massive support from the rest of the cast that delivers some top notch performances.',
+    url: 'https://www.news18.com/news/movies/83 movie review ranveer singh delivers his career best performance as kapil dev in kabir khan film 4576016.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/ranveer singh 6 1 164005207816x9.jpg',
+    publishedAt: '2021 12 21T02:17:00Z',
+    content: '83\r\n' +
+      'Director: Kabir Khan\r\n' +
+      'Cast: Ranveer Singh, Deepika Padukone, Pankaj Tripathi, Tahir Raj Bhasin, Jiiva, Saqib Saleem, Jatin Sarna, Chirag Patil, Dinker Sharma, Nishant Dahiya, Harrdy Sandhu, Sahil… [+4011 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da608"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: 'CMS Info Systems IPO opens today. Should you subscribe to the issue? Moneycontrol.com',
+    description: 'Majority of the brokerages hold a positive view about the company which, on December 20, garnered Rs 330 crore from 12 anchor investors',
+    url: 'https://www.moneycontrol.com/news/business/ipo/cms info systems ipo opens today should you subscribe 7847111.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/10/IPO 1 770x433.jpg',
+    publishedAt: '2021 12 21T02:12:40Z',
+    content: 'CMS Info Systems Limited (CMS) will float its Rs 1,100 crore public issue on December 21. The offer will close on Thursday.\r\n' +
+      'CMS is one of the largest ATM cash management companies worldwide based on… [+5874 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da609"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: "Hot Stocks | Here's Why You Should Bet On Finolex Cables, RHI Magnesita India, And Sell Grasim In Short term Moneycontrol.com",
+    description: 'Nandish Shah of HDFC securities believes that, short term trend of the Nifty remains weak. Therefore, their advice is to remain cautious till Nifty closes above the 17,000 levels.',
+    url: 'https://www.moneycontrol.com/news/business/markets/hot stocks here is why you should bet on finolex cables rhi magnesita india and sell grasim in short term 7846401.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/03/Trading 770x433.jpg',
+    publishedAt: '2021 12 21T02:04:19Z',
+    content: 'Nandish Shah, Senior Derivative &amp; Technical Analyst at HDFC securities\r\n' +
+      'Nifty plunged 371 points or 2.18 percent on Monday amid Omicron fears to close at four month low at 16,614 levels. This is … [+2950 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60a"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'Teena Thacker',
+    title: 'Next few days to tell if Omicron or Delta led to surge, say experts Economic Times',
+    description: 'Doctors say that the next few days are crucial. With cases going up, many experts have called for booster jabs for healthcare workers. Some experts say Omicron is likely to spread.',
+    url: 'https://economictimes.indiatimes.com/news/india/next few days to tell if omicron or delta led to surge say experts/articleshow/88401377.cms',
+    urlToImage: 'https://img.etimg.com/thumb/msid 88401399,width 1070,height 580,imgsize 29388,overlay economictimes/photo.jpg',
+    publishedAt: '2021 12 21T01:21:00Z',
+    content: "As parts of India start to see an uptick in Covid 19 cases, experts say it will take a few days to determine whether it's a resurgence of the Delta variant due to declining immunity or if Omicron, th… [+2382 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60b"),
+    source: { id: null, name: 'The Indian Express' },
+    author: 'Kanchan Vasdev',
+    title: 'Bills on life term for sacrilege pending, need President assent: Punjab to Centre The Indian Express',
+    description: '🔴 Speaking to The Indian Express, Deputy Chief Minister Sukhjinder Singh Randhawa said that “the state has written to the Centre umpteen times about the pending assent".',
+    url: 'https://indianexpress.com/article/cities/chandigarh/bills on life term for sacrilege pending need president assent punjab to centre 7682688/',
+    urlToImage: 'https://images.indianexpress.com/2021/12/Golden Temple 1.jpeg',
+    publishedAt: '2021 12 21T01:13:48Z',
+    content: 'ON A day when the Punjab police released a photo of the youth who was beaten to deathfor allegedly committing an act of sacrilege at the Golden Temple in a bid to identify him, Deputy Chief Minister … [+4702 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60c"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'Agence France Presse',
+    title: 'Rafael Nadal Says He Has Tested Positive For Covid NDTV Sports',
+    description: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week.',
+    url: 'https://sports.ndtv.com/tennis/rafael nadal says he has tested positive for covid 2661270',
+    urlToImage: 'https://c.ndtvimg.com/2021 12/p57fe6f4_rafael nadal_625x300_18_December_21.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=675',
+    publishedAt: '2021 12 21T00:38:00Z',
+    content: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week. "I am going through some unpleasant moment… [+1227 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60d"),
+    source: { id: null, name: 'Hindustan Times' },
+    author: 'hindustantimes.com',
+    title: "Omicron will lead to 'viral blizzard' of Covid 19, says US expert Hindustan Times",
+    description: 'Omicron is now the dominant strain in the US, accounting for 73 per cent of new infections last week, federal health officials said on Monday. Since the end of June, the delta variant had been the main version causing US infections. | World News',
+    url: 'https://www.hindustantimes.com/world news/omicron will lead to viral blizzard of covid 19 says us expert 101640046102476.html',
+    urlToImage: 'https://images.hindustantimes.com/img/2021/12/21/1600x900/Omicron_threat_mask_1640046340676_1640046340867.jpg',
+    publishedAt: '2021 12 21T00:28:32Z',
+    content: 'The Omicron variant has been spreading across the United States rapidly. It was already hit hard by the earlier waves of the pandemic, and not the new strain of coronavirus has accelerated the rate o… [+1802 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60e"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'NDTV Newsdesk',
+    title: 'COVID 19 Live Updates: 6,563 Cases In India Today, 7% Lower Than Yesterday NDTV',
+    description: 'India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Family Welfare today, taking the total cases in the country since the beginning of the pandemic to 3,47,46,838.',
+    url: 'https://www.ndtv.com/india news/coronavirus india live updates india reports 7 081 cases in last 24 hours 2660342',
+    urlToImage: 'https://c.ndtvimg.com/2021 11/si9s679g_coronavirus india afp nov 2021_650x400_02_November_21.jpg',
+    publishedAt: '2021 12 21T00:23:12Z',
+    content: 'COVID 19 Cases: India has so far conducted over 66.41 crore cumulative tests. (File)\r\n' +
+      'New Delhi: India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Fa… [+6416 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60f"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'TNN',
+    title: 'Of 161 Omicron cases, 80% are asymptomatic, says minister Times of India',
+    description: 'India News: Of a total of 161 cases of the Omicron variant of Covid 19 detected in the country so far, 13% were mild, whereas 80% were asymptomatic and 44 have re',
+    url: 'https://timesofindia.indiatimes.com/india/of 161 omicron cases 80 are asymptomatic says minister/articleshow/88400647.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid 88400649,width 1070,height 580,imgsize 24522,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg',
+    publishedAt: '2021 12 20T23:13:00Z',
+    content: 'Of 161 Omicron cases, 80% are asymptomatic, says minister\r\n' +
+      '<ul><li>News</li>\r\n' +
+      '<li>India News</li>\r\n' +
+      '<li>Of 161 Omicron cases, 80% are asymptomatic, says minister</li></ul>'
+  }
+]
+
+
+
+
+
+
+
+
+news> db.news_feeds.updateMany({author:'TNN'},{$set:{author:'Tnn'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+
+news> db.news_feeds.deleteMany({'author':'Sports Desk'})
+{ acknowledged: true, deletedCount: 0 }
+
+
+
+news> db.news_feeds.deleteMany({'author':'Tnn'})
+{ acknowledged: true, deletedCount: 1 }
+
+
+
+news> db.news_feeds.find().pretty();
+[
+  {
+    _id: ObjectId("61c17ce13e05a70e439da5fd"),
+    author: 'News Desk',
+    title: "Kolkata Municipal Corporation Election Results 2021 LIVE Updates: 'Khela Hobe' Plays Outside Mamata's Home - News18",
+    description: 'KMC Election 2021 LIVE Updates: The polls took place amid heightened security and following Covid-19 protocols on Sunday across 4,959 polling booths.',
+    url: 'https://www.news18.com/news/india/kolkata-municipal-election-results-2021-live-updates-counting-of-votes-tmc-vs-bjp-cpi-mamata-banerjee-latest-news-livenews-4576022.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/screenshot-32-164005952616x9.png',
+    publishedAt: '2021-12-21T04:22:51Z',
+    content: "Dec 21, 2021 10:13 ISTKMC Election 2021 Result LIVE: Celebrations Begin Outside CM's Residence as TMC Wins 3 Seats, Cong Bags 1\r\n" +
+      'Trends\r\n' +
+      'TMC 119\r\n' +
+      'BJP 3\r\n' +
+      'LF 3\r\n' +
+      'Cong 2\r\n' +
+      'Others 2\r\n' +
+      'Dec 21, 2021 10:02 IST… [+7199 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5fe"),
+    author: 'Darab Ali',
+    title: 'Realme GT 2 Pro May Change The Android Market With These 3 New Features - News18',
+    description: "The Realme GT 2 Pro will be launched as the Chinese company's next flagship offering.",
+    url: 'https://www.news18.com/news/tech/realme-gt-2-pro-may-change-the-android-market-with-these-3-new-features-4576349.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/realme-gt-2-pro-164005964416x9.jpg',
+    publishedAt: '2021-12-21T04:07:41Z',
+    content: 'Chinese smartphone maker Realme has announced features of its next flagship, the Realme GT 2 Pro. The company claims that three new features on the Realme GT 2 Pro come as “world’s first innovations"… [+2903 chars]'
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da5ff"),
+    author: null,
+    title: 'iQOO Neo 5S with Snapdragon 888 and Neo 5SE launched - India Today',
+    description: 'iQOO has announced its latest smartphones the iQOO Neo 5S and iQOO Neo 5 SE in its Neo series of smartphones.',
+    url: 'https://www.indiatoday.in/technology/news/story/iqoo-neo-5s-with-snapdragon-888-and-neo-5se-launched-1890182-2021-12-21',
+    urlToImage: 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202112/iQOO_Neo_5s_0-647x363.jpeg?pM4tNMx5SX1TNoqvyts_5IE5xYABK3Rw',
+    publishedAt: '2021-12-21T04:04:18Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17da13e05a70e439da600"),
+    author: 'Reuters',
+    title: "Ashes: 'Why are you captain?' Ricky Ponting slams Joe Root comments on England bowlers - Times of India",
+    description: "Cricket News: Former Australia skipper Ricky Ponting has questioned Joe Root's comments about England's bowlers during the Ashes and said that as captain of the tou",
+    url: 'https://timesofindia.indiatimes.com/sports/cricket/news/ashes-why-are-you-captain-ricky-ponting-slams-joe-root-comments-on-england-bowlers/articleshow/88402571.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid-88402575,width-1070,height-580,imgsize-46416,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+    publishedAt: '2021-12-21T03:15:00Z',
+    content: "Australia's greatest off-spinner joins Australia's greatest leg-spinner with the most Test wickets at Adelaide Oval https://t.co/YfDxhYdkhW\r\n" +
+      '— cricket.com.au (@cricketcomau) 1640035620000'
+  },
+  {
+    '0': {
+      source: { id: 'the-times-of-india', name: 'The Times of India' },
+      author: 'TIMESOFINDIA.COM',
+      title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes - Times of India',
+      description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+      url: 'https://timesofindia.indiatimes.com/gadgets-news/garena-free-fire-redeem-codes-for-december-21-how-to-redeem-daily-codes/articleshow/88399889.cms',
+      urlToImage: 'https://static.toiimg.com/thumb/msid-88399877,width-1070,height-580,imgsize-86786,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg',
+      publishedAt: '2021-12-21T03:09:00Z',
+      content: null
+    },
+    _id: ObjectId("61c17e343e05a70e439da601")
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da602"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'TIMESOFINDIA.COM',
+    title: 'Garena Free Fire Redeem Codes for December 21: How to redeem daily codes Times of India',
+    description: 'In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle',
+    url: 'https://timesofindia.indiatimes.com/gadgets news/garena free fire redeem codes for december 21 how to redeem daily codes/articleshow/88399889.cms',
+    urlToImage: 'https://static.toiimg.com/thumb/msid 88399877,width 1070,height 580,imgsize 86786,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg',
+    publishedAt: '2021 12 21T03:09:00Z',
+    content: null
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da603"),
+    source: { id: null, name: 'Bollyinside.com' },
+    author: null,
+    title: "Free Live Virtual Shows from SMC's Drescher Planetarium Explore Venus, Lunar Vehicles and Exoplanets This Winter BollyInside",
+    description: 'The winter 2022 shows are: • Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): “Venus, We’ve Missed You!” — Associate Lecturer',
+    url: 'https://www.bollyinside.com/news/free live virtual shows from smcs drescher planetarium explore venus lunar vehicles and exoplanets this winter',
+    urlToImage: 'https://www.bollyinside.com/wp content/uploads/2021/10/Amazon wants to turn your cell phone into a satellite.png',
+    publishedAt: '2021 12 21T02:38:19Z',
+    content: 'The winter 2022 shows are: Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): Venus, Weve Missed You! Associate Lecturer Sarah Vincent. Venus may be named for the Roman god… [+1957 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da604"),
+    source: { id: null, name: 'News18' },
+    author: 'Cricketnext Staff',
+    title: "'They Can Make Such Arrangements': Former Pak Captain Reacts to Postponement of IND vs SA T20Is News18",
+    description: 'Former Pakistan captain Salman Butt said India have got their priorities. He even speculated that the Men in Blue might play a bilateral series with Australia ahead of the mega ICC event.',
+    url: 'https://www.news18.com/cricketnext/news/they can make such arrangements former pak captain reacts to postponement of ind vs sa t20is 4576034.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/rohit sharma led team india 164005345816x9.jpg',
+    publishedAt: '2021 12 21T02:24:42Z',
+    content: 'Team Indias South Africa tour is set to begin from December 26 in Centurion. The visitors will play 3 Tests, followed by as many ODIs. Initially, the tour was supposed to kick off on December 17 and … [+1901 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da605"),
+    source: { id: null, name: 'Livemint' },
+    author: 'Rashmi Sanyal',
+    title: 'Stocks to Watch: Axis Bank, Yes Bank, Dish TV, Adani Enterprises, Wipro Mint',
+    description: 'MapmyIndia will make its stock exchange debut on today. Experts largely feel the listing will be at a premium. MapmyIndia, which offers proprietary digital maps as a service (MaaS), software as a service (SaaS) and platform as a service (PaaS), saw its issue …',
+    url: 'https://www.livemint.com/market/stock market news/stocks to watch axis bank yes bank dish tv adani enterprises wipro 11640049457474.html',
+    urlToImage: 'https://images.livemint.com/img/2021/12/21/600x338/stock_markets_1640053271772_1640053271926.JPG',
+    publishedAt: '2021 12 21T02:23:07Z',
+    content: 'Axis Bank: Has emerged as the frontrunner to buy Citis consumer business in India, piping rival contenders Kotak Mahindra Bank and Indusind Bank. Axis and Citi has signed an exclusivity agreement to … [+2684 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da606"),
+    source: { id: null, name: 'CNBCTV18' },
+    author: 'Sandeep Singh',
+    title: "Trade setup for Dec 21: Will Nifty50 bounce back now? Check out key market cues before Tuesday's session CNBCTV18",
+    description: "Trade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts suggest for the coming session on Dalal Street.",
+    url: 'https://www.cnbctv18.com/market/stocks/trade setup for dec 21 trading guide where is nifty50 headed key market cues before tuesday session 11875972.htm',
+    urlToImage: 'https://images.cnbctv18.com/wp content/uploads/2021/02/bond market.jpg',
+    publishedAt: '2021 12 21T02:23:00Z',
+    content: "MiniTrade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts su… [+44 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da607"),
+    source: { id: null, name: 'News18' },
+    author: 'Sonil Dedhia',
+    title: "83 Movie Review: Ranveer Singh Delivers His Career Best Performance As Kapil Dev in Kabir Khan's Film News18",
+    description: '83 movie review: While Ranveer Singh leads the team as the captain, the actor gets massive support from the rest of the cast that delivers some top notch performances.',
+    url: 'https://www.news18.com/news/movies/83 movie review ranveer singh delivers his career best performance as kapil dev in kabir khan film 4576016.html',
+    urlToImage: 'https://images.news18.com/ibnlive/uploads/2021/12/ranveer singh 6 1 164005207816x9.jpg',
+    publishedAt: '2021 12 21T02:17:00Z',
+    content: '83\r\n' +
+      'Director: Kabir Khan\r\n' +
+      'Cast: Ranveer Singh, Deepika Padukone, Pankaj Tripathi, Tahir Raj Bhasin, Jiiva, Saqib Saleem, Jatin Sarna, Chirag Patil, Dinker Sharma, Nishant Dahiya, Harrdy Sandhu, Sahil… [+4011 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da608"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: 'CMS Info Systems IPO opens today. Should you subscribe to the issue? Moneycontrol.com',
+    description: 'Majority of the brokerages hold a positive view about the company which, on December 20, garnered Rs 330 crore from 12 anchor investors',
+    url: 'https://www.moneycontrol.com/news/business/ipo/cms info systems ipo opens today should you subscribe 7847111.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/10/IPO 1 770x433.jpg',
+    publishedAt: '2021 12 21T02:12:40Z',
+    content: 'CMS Info Systems Limited (CMS) will float its Rs 1,100 crore public issue on December 21. The offer will close on Thursday.\r\n' +
+      'CMS is one of the largest ATM cash management companies worldwide based on… [+5874 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da609"),
+    source: { id: null, name: 'Moneycontrol' },
+    author: null,
+    title: "Hot Stocks | Here's Why You Should Bet On Finolex Cables, RHI Magnesita India, And Sell Grasim In Short term Moneycontrol.com",
+    description: 'Nandish Shah of HDFC securities believes that, short term trend of the Nifty remains weak. Therefore, their advice is to remain cautious till Nifty closes above the 17,000 levels.',
+    url: 'https://www.moneycontrol.com/news/business/markets/hot stocks here is why you should bet on finolex cables rhi magnesita india and sell grasim in short term 7846401.html',
+    urlToImage: 'https://images.moneycontrol.com/static mcnews/2021/03/Trading 770x433.jpg',
+    publishedAt: '2021 12 21T02:04:19Z',
+    content: 'Nandish Shah, Senior Derivative &amp; Technical Analyst at HDFC securities\r\n' +
+      'Nifty plunged 371 points or 2.18 percent on Monday amid Omicron fears to close at four month low at 16,614 levels. This is … [+2950 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60a"),
+    source: { id: 'the times of india', name: 'The Times of India' },
+    author: 'Teena Thacker',
+    title: 'Next few days to tell if Omicron or Delta led to surge, say experts Economic Times',
+    description: 'Doctors say that the next few days are crucial. With cases going up, many experts have called for booster jabs for healthcare workers. Some experts say Omicron is likely to spread.',
+    url: 'https://economictimes.indiatimes.com/news/india/next few days to tell if omicron or delta led to surge say experts/articleshow/88401377.cms',
+    urlToImage: 'https://img.etimg.com/thumb/msid 88401399,width 1070,height 580,imgsize 29388,overlay economictimes/photo.jpg',
+    publishedAt: '2021 12 21T01:21:00Z',
+    content: "As parts of India start to see an uptick in Covid 19 cases, experts say it will take a few days to determine whether it's a resurgence of the Delta variant due to declining immunity or if Omicron, th… [+2382 chars]"
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60b"),
+    source: { id: null, name: 'The Indian Express' },
+    author: 'Kanchan Vasdev',
+    title: 'Bills on life term for sacrilege pending, need President assent: Punjab to Centre The Indian Express',
+    description: '🔴 Speaking to The Indian Express, Deputy Chief Minister Sukhjinder Singh Randhawa said that “the state has written to the Centre umpteen times about the pending assent".',
+    url: 'https://indianexpress.com/article/cities/chandigarh/bills on life term for sacrilege pending need president assent punjab to centre 7682688/',
+    urlToImage: 'https://images.indianexpress.com/2021/12/Golden Temple 1.jpeg',
+    publishedAt: '2021 12 21T01:13:48Z',
+    content: 'ON A day when the Punjab police released a photo of the youth who was beaten to deathfor allegedly committing an act of sacrilege at the Golden Temple in a bid to identify him, Deputy Chief Minister … [+4702 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60c"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'Agence France Presse',
+    title: 'Rafael Nadal Says He Has Tested Positive For Covid NDTV Sports',
+    description: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week.',
+    url: 'https://sports.ndtv.com/tennis/rafael nadal says he has tested positive for covid 2661270',
+    urlToImage: 'https://c.ndtvimg.com/2021 12/p57fe6f4_rafael nadal_625x300_18_December_21.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=675',
+    publishedAt: '2021 12 21T00:38:00Z',
+    content: 'Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week. "I am going through some unpleasant moment… [+1227 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60d"),
+    source: { id: null, name: 'Hindustan Times' },
+    author: 'hindustantimes.com',
+    title: "Omicron will lead to 'viral blizzard' of Covid 19, says US expert Hindustan Times",
+    description: 'Omicron is now the dominant strain in the US, accounting for 73 per cent of new infections last week, federal health officials said on Monday. Since the end of June, the delta variant had been the main version causing US infections. | World News',
+    url: 'https://www.hindustantimes.com/world news/omicron will lead to viral blizzard of covid 19 says us expert 101640046102476.html',
+    urlToImage: 'https://images.hindustantimes.com/img/2021/12/21/1600x900/Omicron_threat_mask_1640046340676_1640046340867.jpg',
+    publishedAt: '2021 12 21T00:28:32Z',
+    content: 'The Omicron variant has been spreading across the United States rapidly. It was already hit hard by the earlier waves of the pandemic, and not the new strain of coronavirus has accelerated the rate o… [+1802 chars]'
+  },
+  {
+    _id: ObjectId("61c17fb83e05a70e439da60e"),
+    source: { id: null, name: 'NDTV News' },
+    author: 'NDTV Newsdesk',
+    title: 'COVID 19 Live Updates: 6,563 Cases In India Today, 7% Lower Than Yesterday NDTV',
+    description: 'India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Family Welfare today, taking the total cases in the country since the beginning of the pandemic to 3,47,46,838.',
+    url: 'https://www.ndtv.com/india news/coronavirus india live updates india reports 7 081 cases in last 24 hours 2660342',
+    urlToImage: 'https://c.ndtvimg.com/2021 11/si9s679g_coronavirus india afp nov 2021_650x400_02_November_21.jpg',
+    publishedAt: '2021 12 21T00:23:12Z',
+    content: 'COVID 19 Cases: India has so far conducted over 66.41 crore cumulative tests. (File)\r\n' +
+      'New Delhi: India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Fa… [+6416 chars]'
+  }
+]
+
+
+
+
+
+db.news_feeds.insertMany([{ "source": { "id": "the times of india", "name": "The Times of India" }, "author": "TIMESOFINDIA.COM", "title": "Garena Free Fire Redeem Codes for December 21: How to redeem daily codes Times of India", "description": "In this game, players have an option to select their starting positions, collect supplies and weapons that they need to keep going while on the battle", "url": "https://timesofindia.indiatimes.com/gadgets news/garena free fire redeem codes for december 21 how to redeem daily codes/articleshow/88399889.cms", "urlToImage": "https://static.toiimg.com/thumb/msid 88399877,width 1070,height 580,imgsize 86786,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg", "publishedAt": "2021 12 21T03:09:00Z", "content": null }, { "source": { "id": null, "name": "Bollyinside.com" }, "author": null, "title": "Free Live Virtual Shows from SMC's Drescher Planetarium Explore Venus, Lunar Vehicles and Exoplanets This Winter BollyInside", "description": "The winter 2022 shows are: • Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): “Venus, We’ve Missed You!” — Associate Lecturer", "url": "https://www.bollyinside.com/news/free live virtual shows from smcs drescher planetarium explore venus lunar vehicles and exoplanets this winter", "urlToImage": "https://www.bollyinside.com/wp content/uploads/2021/10/Amazon wants to turn your cell phone into a satellite.png", "publishedAt": "2021 12 21T02:38:19Z", "content": "The winter 2022 shows are: Friday, January 7 and 21, at 8 p.m. (following The Night Sky Show at 7 p.m.): Venus, Weve Missed You! Associate Lecturer Sarah Vincent. Venus may be named for the Roman god… [+1957 chars]" }, { "source": { "id": null, "name": "News18" }, "author": "Cricketnext Staff", "title": "'They Can Make Such Arrangements': Former Pak Captain Reacts to Postponement of IND vs SA T20Is News18", "description": "Former Pakistan captain Salman Butt said India have got their priorities. He even speculated that the Men in Blue might play a bilateral series with Australia ahead of the mega ICC event.", "url": "https://www.news18.com/cricketnext/news/they can make such arrangements former pak captain reacts to postponement of ind vs sa t20is 4576034.html", "urlToImage": "https://images.news18.com/ibnlive/uploads/2021/12/rohit sharma led team india 164005345816x9.jpg", "publishedAt": "2021 12 21T02:24:42Z", "content": "Team Indias South Africa tour is set to begin from December 26 in Centurion. The visitors will play 3 Tests, followed by as many ODIs. Initially, the tour was supposed to kick off on December 17 and … [+1901 chars]" }, { "source": { "id": null, "name": "Livemint" }, "author": "Rashmi Sanyal", "title": "Stocks to Watch: Axis Bank, Yes Bank, Dish TV, Adani Enterprises, Wipro Mint", "description": "MapmyIndia will make its stock exchange debut on today. Experts largely feel the listing will be at a premium. MapmyIndia, which offers proprietary digital maps as a service (MaaS), software as a service (SaaS) and platform as a service (PaaS), saw its issue …", "url": "https://www.livemint.com/market/stock market news/stocks to watch axis bank yes bank dish tv adani enterprises wipro 11640049457474.html", "urlToImage": "https://images.livemint.com/img/2021/12/21/600x338/stock_markets_1640053271772_1640053271926.JPG", "publishedAt": "2021 12 21T02:23:07Z", "content": "Axis Bank: Has emerged as the frontrunner to buy Citis consumer business in India, piping rival contenders Kotak Mahindra Bank and Indusind Bank. Axis and Citi has signed an exclusivity agreement to … [+2684 chars]" }, { "source": { "id": null, "name": "CNBCTV18" }, "author": "Sandeep Singh", "title": "Trade setup for Dec 21: Will Nifty50 bounce back now? Check out key market cues before Tuesday's session CNBCTV18", "description": "Trade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts suggest for the coming session on Dalal Street.", "url": "https://www.cnbctv18.com/market/stocks/trade setup for dec 21 trading guide where is nifty50 headed key market cues before tuesday session 11875972.htm", "urlToImage": "https://images.cnbctv18.com/wp content/uploads/2021/02/bond market.jpg", "publishedAt": "2021 12 21T02:23:00Z", "content": "MiniTrade setup for Tuesday, December 21: The Nifty50 has formed a long bear candle on the daily chart with a lower shadow, says Nagaraj Shetti of HDFC Securities. Here's what the technical charts su… [+44 chars]" }, { "source": { "id": null, "name": "News18" }, "author": "Sonil Dedhia", "title": "83 Movie Review: Ranveer Singh Delivers His Career Best Performance As Kapil Dev in Kabir Khan's Film News18", "description": "83 movie review: While Ranveer Singh leads the team as the captain, the actor gets massive support from the rest of the cast that delivers some top notch performances.", "url": "https://www.news18.com/news/movies/83 movie review ranveer singh delivers his career best performance as kapil dev in kabir khan film 4576016.html", "urlToImage": "https://images.news18.com/ibnlive/uploads/2021/12/ranveer singh 6 1 164005207816x9.jpg", "publishedAt": "2021 12 21T02:17:00Z", "content": "83\r\nDirector: Kabir Khan\r\nCast: Ranveer Singh, Deepika Padukone, Pankaj Tripathi, Tahir Raj Bhasin, Jiiva, Saqib Saleem, Jatin Sarna, Chirag Patil, Dinker Sharma, Nishant Dahiya, Harrdy Sandhu, Sahil… [+4011 chars]" }, { "source": { "id": null, "name": "Moneycontrol" }, "author": null, "title": "CMS Info Systems IPO opens today. Should you subscribe to the issue? Moneycontrol.com", "description": "Majority of the brokerages hold a positive view about the company which, on December 20, garnered Rs 330 crore from 12 anchor investors", "url": "https://www.moneycontrol.com/news/business/ipo/cms info systems ipo opens today should you subscribe 7847111.html", "urlToImage": "https://images.moneycontrol.com/static mcnews/2021/10/IPO 1 770x433.jpg", "publishedAt": "2021 12 21T02:12:40Z", "content": "CMS Info Systems Limited (CMS) will float its Rs 1,100 crore public issue on December 21. The offer will close on Thursday.\r\nCMS is one of the largest ATM cash management companies worldwide based on… [+5874 chars]" }, { "source": { "id": null, "name": "Moneycontrol" }, "author": null, "title": "Hot Stocks | Here's Why You Should Bet On Finolex Cables, RHI Magnesita India, And Sell Grasim In Short term Moneycontrol.com", "description": "Nandish Shah of HDFC securities believes that, short term trend of the Nifty remains weak. Therefore, their advice is to remain cautious till Nifty closes above the 17,000 levels.", "url": "https://www.moneycontrol.com/news/business/markets/hot stocks here is why you should bet on finolex cables rhi magnesita india and sell grasim in short term 7846401.html", "urlToImage": "https://images.moneycontrol.com/static mcnews/2021/03/Trading 770x433.jpg", "publishedAt": "2021 12 21T02:04:19Z", "content": "Nandish Shah, Senior Derivative &amp; Technical Analyst at HDFC securities\r\nNifty plunged 371 points or 2.18 percent on Monday amid Omicron fears to close at four month low at 16,614 levels. This is … [+2950 chars]" }, { "source": { "id": "the times of india", "name": "The Times of India" }, "author": "Teena Thacker", "title": "Next few days to tell if Omicron or Delta led to surge, say experts Economic Times", "description": "Doctors say that the next few days are crucial. With cases going up, many experts have called for booster jabs for healthcare workers. Some experts say Omicron is likely to spread.", "url": "https://economictimes.indiatimes.com/news/india/next few days to tell if omicron or delta led to surge say experts/articleshow/88401377.cms", "urlToImage": "https://img.etimg.com/thumb/msid 88401399,width 1070,height 580,imgsize 29388,overlay economictimes/photo.jpg", "publishedAt": "2021 12 21T01:21:00Z", "content": "As parts of India start to see an uptick in Covid 19 cases, experts say it will take a few days to determine whether it's a resurgence of the Delta variant due to declining immunity or if Omicron, th… [+2382 chars]" }, { "source": { "id": null, "name": "The Indian Express" }, "author": "Kanchan Vasdev", "title": "Bills on life term for sacrilege pending, need President assent: Punjab to Centre The Indian Express", "description": "🔴 Speaking to The Indian Express, Deputy Chief Minister Sukhjinder Singh Randhawa said that “the state has written to the Centre umpteen times about the pending assent\".", "url": "https://indianexpress.com/article/cities/chandigarh/bills on life term for sacrilege pending need president assent punjab to centre 7682688/", "urlToImage": "https://images.indianexpress.com/2021/12/Golden Temple 1.jpeg", "publishedAt": "2021 12 21T01:13:48Z", "content": "ON A day when the Punjab police released a photo of the youth who was beaten to deathfor allegedly committing an act of sacrilege at the Golden Temple in a bid to identify him, Deputy Chief Minister … [+4702 chars]" }, { "source": { "id": null, "name": "NDTV News" }, "author": "Agence France Presse", "title": "Rafael Nadal Says He Has Tested Positive For Covid NDTV Sports", "description": "Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week.", "url": "https://sports.ndtv.com/tennis/rafael nadal says he has tested positive for covid 2661270", "urlToImage": "https://c.ndtvimg.com/2021 12/p57fe6f4_rafael nadal_625x300_18_December_21.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=675", "publishedAt": "2021 12 21T00:38:00Z", "content": "Rafael Nadal said Monday he has tested positive for Covid 19 on his return to Spain from Abu Dhabi where he took part in an exhibition tournament last week. \"I am going through some unpleasant moment… [+1227 chars]" }, { "source": { "id": null, "name": "Hindustan Times" }, "author": "hindustantimes.com", "title": "Omicron will lead to 'viral blizzard' of Covid 19, says US expert Hindustan Times", "description": "Omicron is now the dominant strain in the US, accounting for 73 per cent of new infections last week, federal health officials said on Monday. Since the end of June, the delta variant had been the main version causing US infections. | World News", "url": "https://www.hindustantimes.com/world news/omicron will lead to viral blizzard of covid 19 says us expert 101640046102476.html", "urlToImage": "https://images.hindustantimes.com/img/2021/12/21/1600x900/Omicron_threat_mask_1640046340676_1640046340867.jpg", "publishedAt": "2021 12 21T00:28:32Z", "content": "The Omicron variant has been spreading across the United States rapidly. It was already hit hard by the earlier waves of the pandemic, and not the new strain of coronavirus has accelerated the rate o… [+1802 chars]" }, { "source": { "id": null, "name": "NDTV News" }, "author": "NDTV Newsdesk", "title": "COVID 19 Live Updates: 6,563 Cases In India Today, 7% Lower Than Yesterday NDTV", "description": "India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Family Welfare today, taking the total cases in the country since the beginning of the pandemic to 3,47,46,838.", "url": "https://www.ndtv.com/india news/coronavirus india live updates india reports 7 081 cases in last 24 hours 2660342", "urlToImage": "https://c.ndtvimg.com/2021 11/si9s679g_coronavirus india afp nov 2021_650x400_02_November_21.jpg", "publishedAt": "2021 12 21T00:23:12Z", "content": "COVID 19 Cases: India has so far conducted over 66.41 crore cumulative tests. (File)\r\nNew Delhi: India reported 6,563 fresh COVID 19 cases in the last 24 hours, informed the Ministry of Health and Fa… [+6416 chars]" }, { "source": { "id": "the times of india", "name": "The Times of India" }, "author": "TNN", "title": "Of 161 Omicron cases, 80% are asymptomatic, says minister Times of India", "description": "India News: Of a total of 161 cases of the Omicron variant of Covid 19 detected in the country so far, 13% were mild, whereas 80% were asymptomatic and 44 have re", "url": "https://timesofindia.indiatimes.com/india/of 161 omicron cases 80 are asymptomatic says minister/articleshow/88400647.cms", "urlToImage": "https://static.toiimg.com/thumb/msid 88400649,width 1070,height 580,imgsize 24522,resizemode 75,overlay toi_sw,pt 32,y_pad 40/photo.jpg", "publishedAt": "2021 12 20T23:13:00Z", "content": "Of 161 Omicron cases, 80% are asymptomatic, says minister\r\n<ul><li>News</li>\r\n<li>India News</li>\r\n<li>Of 161 Omicron cases, 80% are asymptomatic, says minister</li></ul>" }])

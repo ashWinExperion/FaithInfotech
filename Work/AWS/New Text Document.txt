@@ -1,0 +1,269 @@
+
+################################################
+Cloud Concepts Training Session - Faith Infotech
+################################################
+
+Ensure all of you have got the IAM user ids and can login to the AWS console
+
+Choose Region as listed below : 
+us-east-1 (N. Virginia) 
+ - Abhinav, Akhil, Alfina, Anjana, Arathi, Arshin, Ashwin, Athira
+ap-south-1 (Mumbai) 
+ - Babu, Bidhu, Binitha, Ganesh, Kadeeja, Mohammed
+us-east-2 (Ohio)
+ - Nikhil, Rizvana, Sameena, Sneha, Sreehari, Sumeeth
+
+
+########################################
+Lab 1: Launch an EC2 and Login using SSH
+########################################
+
+1. Launch an EC2 (t2.micro; choose RHEL 8 AMI; choose region as us-east-1) 
+2. Add a Name Tag (Name : <your name>-ec2-1)
+3. Create a new security group named <yourname-sg>. add description also as <yourname-sg>.
+   add SSH port in inbound rules. (we will need to add a couple of more ports to this in later stages)
+4. Create a new key pair and download the private key. You may name the key as 
+   <yourname-useast1-ec2-key>
+5. Observe the EC2 entering running state after which you can login to the EC2
+6. Click on Connect button on top. 
+7. Click on SSH client
+8. Copy the login line provided under Example: (step 4 - last line)
+9. Open a command prompt from your laptop by typing cmd at the windows search button 
+   on left side bottom of screen
+10. cd Downloads. ensure the selected key is available here
+11. Paste the command copied from ec2 console (from step 8)
+12. Enter 'yes' and login to EC2
+13. Rename the host - sudo hostnamectl set-hostname <your name>
+14. Exit and login again and you can see your name displayed as hostname
+
+
+
+###########################################
+Lab 2: Write a simple Python program in EC2
+###########################################
+
+1. Check python version
+   which python
+   python --version
+
+2. If not present, Install Python using below command 
+   sudo yum install python3.8
+3. Write a simple Python program 'helloworld.py' (It has 2 lines)
+
+vi helloworld.py
+
+enter the below:
+
+#!/usr/bin/python
+print ('Hello world from <your name>')
+
+Type Escape + : + wq
+
+4. chmod 755 helloworld.py; 
+5. Execute the python code 
+   python3 helloworld.py
+
+
+
+################################
+Lab 3. Start a web server on EC2
+################################
+
+1. Install Apache web server
+   sudo yum install -y httpd
+2. Now, start the server
+   sudo systemctl start httpd
+3. Check httpd status
+   sudo systemctl status httpd
+   It should show as 'active' in green color
+4. Get the public dns name of your browser from the aws console ec2 dashboard
+   Ex: PublicDnsName: ec2-54-197-101-173.compute-1.amazonaws.com
+5. Test your webserver by typing this URL in a web browser
+   http://ec2-54-144-156-99.compute-1.amazonaws.com/
+   If you are not getting a webpage, it means you have not
+   added in your security group inbound rule. Please add http port 80 in sec grp.
+6. With the above, You will get the Apache Test Page displayed.
+7. To get your own page, you need to do the following  
+   -> you need to add index.html in the webserver root directory. 
+8. Your root directory for the web server is /var/www/html.
+   Add index.html in the root directory
+
+   cd /var/www/html
+   sudo vi index.html
+
+   Copy paste the below code into index.html
+
+   <html>
+     <head>
+        <title>Welcome to Cloud Concepts Training Session at Faith Infotech!</title>
+     </head>
+     <body>
+        
+        <h1>This is the first cloud lab successfully completed by Add-Your-Name </h1>
+        
+        <p><font size="+2" color="blue">I'm enjoying the cloud concepts session </font> </p>
+      
+        <p><font size="+2" color="green">Beautiful green village Photos <br> </font> </p>
+        <img src = "https://unusbucket200.s3.amazonaws.com/IdukkiVillage.jpg" length="600" height="400"> </img>
+        <br> <br> <br> <br>
+        <img src = "https://unusbucket200.s3.amazonaws.com/village2.jpg" length="600" height="400"> </img> 
+        </p>
+     </body>
+   </html> 
+
+   <Escape> <:> wq
+
+8. Now check the website again and ensure it is working
+
+
+
+#############################
+Lab 4. Clean up the resources 
+#############################
+
+1. Disassociate the elastic IP. then deallocate. 
+2. terminate the instance you had started
+3. We will delete security group after the next lab. 
+4. we will delete the keypair after next lab
+
+
+
+
+############################
+Lab 5. Set up Load Balancer 
+############################
+
+Task 1 : Create 2 EC2 insatnces (Ubuntu)
+========================================
+1. Go to EC2 Dashboard.
+2. Create 2 Ubuntu 20.04 instances  
+3. In step 3 (Configure instance), specify the number of instances as 2.
+4. Choose security group such that the SSH port (22) and HTTP port (80) are open
+5. Launch instances. While the instances are coming up, you can set up target group 
+   and Load Balancer
+
+Task 2 : Create Target Group and Load Balancer 
+==============================================
+6. Click on Target Group; Create target group
+7. Target type : instances. Add TG name as yourname-tg
+8. Add tag - Name : yourname-elb. Leave everything else as default. Click Next
+9. Choose the 2 insatnces and click on 'Include as pending below'
+10. Create target group. Next proceed to Create Loadbalancer
+11. Click on load balancer (left side menu)
+12. Create Load Balancer; Create Application Load Balancer
+13. LB name : yourname-elb; Internet facing; Choose the availability zones where the 2 EC2s are launched
+    (Go back to ec2 console and check the AZ of the ec2s). You have to choose at least 2 AZs; In security 
+    group section, add the security group you had created in task 1. So ELB will have the default security 
+    group + your security group 
+14. Under Listener, update 'Forward to' field. Add your target group name in this box. 
+15. Click 'Create Load Balancer'
+
+Task 3 : Start web server in the first EC2 
+==========================================
+16. SSH into first EC2 
+17. Add a shell script which can start nginx web server and add index.html in document route.
+ vi nginx.sh
+ Add below contents in this file:
+
+#!/bin/bash
+apt-get update
+apt-get -y install nginx
+MYIP=`hostname -I | awk '{print $1}' | cut -d ':' -f2`
+echo '<html><h1> Welcome to Cloud Concepts Training </h1> <br>
+<h2> This is First EC2. IP address of this EC2 is ' $MYIP '</h2></html>' > /var/www/html/index.html
+
+Escape : wq
+
+18. chmod 755 nginx.sh
+19. Execute the shell script with this command: sudo ./nginx.sh
+
+Task 4 : Start web server in the Second EC2 
+===========================================
+20. SSH into second EC2 
+21. Add the shell script which can start nginx web server and add index.html in document route.
+  vi nginx.sh
+  Add below contents:
+
+#!/bin/bash
+apt-get update
+apt-get -y install nginx
+MYIP=`hostname -I | awk '{print $1}' | cut -d ':' -f2`
+echo '<html><h1> Welcome to Cloud Concepts Training </h1> <br>
+<h2> This is second EC2. IP address of this EC2 is ' $MYIP '</h2></html>' > /var/www/html/index.html
+
+Escape : wq
+
+22. chmod 755 nginx.sh
+23. Execute the shell script with this command: sudo ./nginx.sh
+
+Task 5 : View the web page on the browser 
+=========================================
+24. Go to ec2 console. click on Load Balancer. Goto the ALB and copy the DNS name
+25. Paste the DNS name in a browser. Observe the ip address given in the website.
+26. Do reload of the page. Observe that the ip address changes. Repeat reloading and 
+    see the ip address changes every time (which indicates that each subsequent request is 
+    getting routed to the alternate EC2) 
+
+
+Task 6 : Lab Clean Up 
+=====================
+1. Delete load balancer
+2. Delete target group
+3. Terminate ec2 instances
+4. Delete the security groups
+5. Delete the key pairs
+
+
+
+############################################
+Lab 6. S3 bucket creation and objects upload
+############################################
+
+Task 1: Bucket creation and Object Upload
+=========================================
+01. Go to S3 console: https://s3.console.aws.amazon.com/s3/
+02. Click on 'Create Bucket'
+03. Choose bucket name 'yourfirstname-3112'
+04. Choose the region assigned to you (us-east-1 / us-east-2 / ap-south-1)
+05. Under Object Ownership, click on ACLs enabled
+06. Unclick 'Block All Public Access'
+07. Add Tag 'Name: yourname-S3'
+08. Rest can be default values. Click on 'Create Bucket'
+09. Click on the bucket name and open it.
+10. Create a text file (with any content) in your desktop and upload it into the bucket
+11. Select the object by clicking the checkbox and then select actions.
+12. Select 'Make Public via ACL'
+13. Click on the Object and open it. Copy the Object URL. Go to another browser window and paste the URL 
+    on the browser.
+14. You should be able to view the file.
+15. Repeat step 10 to 14 with a jpg file or photo. You may use your own pictures or you can download the 
+    following picture and use it:  https://unusbucket200.s3.amazonaws.com/IdukkiVillage.jpg 
+
+
+Task 2: Clean up the Lab
+========================
+1. Delete objects from bucket
+2. Delete bucket
+
+
+###################################################
+Practice Lab 7. Create a new security group and EC2
+###################################################
+Steps are not given for practice labs. You may refer to previous labs to understand the steps.
+
+Task 1: Create new security group
+=================================
+1. Create a new security group which has following inbound ports opened : 
+   --> SSH (22), HTTP (80), HTTPS (443)
+   --> Name : yourname-sg100
+
+Task 2: Create new security group
+=================================
+1. Create a new EC2 in your designated region which will use the OS 'Red Hat Enterprise Linux 8'. 
+   Use the security group you created in task 1. Use the below tag
+   --> Name: yourname-ec2dec31
+
+
+
+
+
